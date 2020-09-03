@@ -1,0 +1,10 @@
+#! python 
+
+import datetime
+from convertime import constants, conversions
+
+now = datetime.datetime.now()
+first_day_of_2021 = datetime.datetime(2021, 1, 1, 0, 0, 0)
+diff = first_day_of_2021 - now
+seconds_left = conversions.days_to_seconds(diff.days) + diff.seconds
+print(f"There are {seconds_left} seconds left in 2020!")
